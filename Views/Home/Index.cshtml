@@ -1,0 +1,29 @@
+﻿<div class="jumbotron">
+    <h1>Pets and Owners</h1>
+</div>
+
+<table class="table table-striped">
+    <tr>
+        <th>Pet Name</th>
+        <th>Pet Species</th>
+        <th>Owner Name</th>
+    </tr>
+    @foreach(var pet in ViewBag.Pets)
+    {
+        <tr>
+            <td>@pet.Name</td>
+            <td>@pet.Species</td>
+            <td>@pet.PetOwner.Name</td>
+        </tr>
+    }
+</table>
+
+<div class="col-sm-6">
+    <h2>Create an Owner</h2>
+    <partial name="_NewOwner"></partial>
+</div>
+
+<div class="col-sm-6">
+    <h2>Create an Pet</h2>
+    <partial name="_NewPet"></partial>
+</div>
